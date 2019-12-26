@@ -1,0 +1,23 @@
+public class Clients {
+    String name;
+    double priceDeposite;
+    double procent;
+    double initialPrice;
+    double amountYears;
+    double $active;
+    double ConvertUAN;
+    double gold$Active;
+
+    double sumConveer;
+    double rate;
+    double resultConveer;
+    double allSumActivites;
+    double priceAllActivites;
+
+    public Clients(String name, double procent, double initialPrice, double amountYears) {
+        this.name = name;
+        this.procent = procent;
+        this.initialPrice = initialPrice;
+        this.amountYears = amountYears;
+    }
+}

@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Application {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        FisicleClient FS = new FisicleClient("Josh", 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 0);
+
+        ClientFiller IC = new ClientFiller(0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0);
+
+        LegalClient LC = new LegalClient("Alice", 0, 0,
+                0, 0, 0, 0, 0);
+
+        System.out.println("Choose info about customer: [FISICLE/LEGAL]");
+        Integer one = 1;
+        String info = in.nextLine();
+        info = info.toUpperCase();
+
+        switch (info) {
+            case "FISICLE":
+                FS.typeOfmoney();
+                FS.typeOfmetal();
+                System.out.println("1)If you want to cuclulate(USD) *** Money Active Deposite *** -> input '1'");
+                System.out.println("2)If yot want to convert to UAN *** Money Active Deposite *** -> input '2' ");
+                System.out.println("3)If you want to add all activites -> input '3' ");
+                one = in.nextInt();
+                if (one == 1) {
+                    IC.depositeInputMoney();
+                    break;
+                }
+                if (one == 2) {
+                    IC.convertInputUAN();
+                    break;
+                }
+                if (one == 3) {
+                    FS.allSumActivites();
+                    break;
+                }
+            case "LEGAL":
+                LC.typeOfmoney();
+                LC.typeOfmetal();
+                System.out.println("1)If you want to cuclulate(USD) *** Money Active Deposite *** -> input '1'");
+                System.out.println("2)If you want to convert to UAN *** Money Active Deposite *** -> input '2' ");
+                System.out.println("3)If you want to add all activites -> input '3'");
+                one = in.nextInt();
+                if (one == 1) {
+                    IC.depositeInputMoney();
+                    break;
+                }
+                if (one == 2) {
+                    IC.convertInputUAN();
+                    break;
+                }
+                if (one == 3) {
+                    LC.allSumActivites();
+                    break;
+                }
+            default:
+                System.out.print("This customers not found!!!");
+        }
+
+    }

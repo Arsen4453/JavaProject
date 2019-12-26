@@ -1,0 +1,44 @@
+final class FisicleClient extends Clients {
+   public FisicleClient(String name,
+                        double procent,
+                        double initialPrice,
+                        double amountYears,
+                        double $active,
+                        double gold$Active,
+                        double convertUAN,
+                        double sumConveer,
+                        double rate,
+                        double resultConveer,
+                        double allSumActivites,
+                        double priceAllActivites){
+       super(name,procent,initialPrice,amountYears);
+       this.$active = $active;
+       this.gold$Active = gold$Active;
+       this.ConvertUAN = convertUAN;
+       this.sumConveer = sumConveer;
+       this.rate = rate;
+       this.resultConveer = resultConveer;
+       this.allSumActivites = allSumActivites;
+       this.priceAllActivites = priceAllActivites;
+   }
+
+   final public void typeOfmoney() {
+       name = "Josh";
+       $active = 4339.12;
+       System.out.println("Name: " + name);
+       System.out.println(name + " is fisicle face!");
+       System.out.println("Active money: $" + $active);
+   }
+
+   final public void typeOfmetal() {
+        name = "Josh";
+        gold$Active = 50;
+        System.out.println("Active gold: " + gold$Active + " gm");
+   }
+
+   final public double allSumActivites() {
+        priceAllActivites = $active + gold$Active;
+        System.out.println("Prise all your activites: " + priceAllActivites);
+       return priceAllActivites;
+    }
+}

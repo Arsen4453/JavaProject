@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+final public class ClientFiller {
+    Scanner in = new Scanner(System.in);
+
+    public double sumConveer;
+    public double rate;
+    public double resultConveer;
+    public double initialPrice;
+    public double procent;
+    public double amountYears;
+    public double priceDeposite;
+    public double priceAllActivites;
+    public double $active;
+    public double gold$Active;
+
+    public ClientFiller(double sumConveer,
+                        double rate,
+                        double resultConveer,
+                        double initialPrice,
+                        double procent,
+                        double amountYears,
+                        double priceDeposite,
+                        double priceAllActivites,
+                        double $active,
+                        double gold$Active) {
+        this.sumConveer = sumConveer;
+        this.rate = rate;
+        this.resultConveer = resultConveer;
+        this.initialPrice = initialPrice;
+        this.procent = procent;
+        this.amountYears = amountYears;
+        this.priceDeposite = priceDeposite;
+        this.priceAllActivites = priceAllActivites;
+        this.$active = $active;
+        this.gold$Active = gold$Active;
+    }
+
+   final public double convertInputUAN() {
+        System.out.println("Input amount in conversion currency: ");
+        sumConveer = in.nextDouble();
+        System.out.println("Input rate: ");
+        rate = in.nextDouble();
+        resultConveer = 23 * sumConveer / 100;
+        System.out.println("USD: " + resultConveer);
+        return resultConveer;
+    }
+
+   final  public double depositeInputMoney() {
+        System.out.println("Input Initial Price $Active: ");
+        initialPrice = in.nextDouble();
+        System.out.println("Input Procent: ");
+        procent = in.nextDouble();
+        System.out.println("Input Amount Time(years): ");
+        amountYears = in.nextDouble();
+        priceDeposite = (initialPrice * procent * amountYears)/365*100;
+        System.out.println("Throw " + amountYears + " years" + " you will earn " + priceDeposite + " $");
+        return priceDeposite;
+    }
